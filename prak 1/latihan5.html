@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Gambar</title>
+</head>
+<body>
+    <h1>Contoh Gambar dalam HTML</h1>
+
+    <p>Gambar lokal</p>
+    <img src="images/sample.jpg" alt="Contoh Gambar" width="300">
+    <p>Gambar di atas adalah contoh gambar lokal dengan lebar 300px.</p>
+
+    <h2>Gambar dengan ukuran berbeda</h2>
+    <p>
+        <img src="images/sample.jpg" alt="Gambar kecil" width="150" height="100">
+    </p>
+    <p>
+        <img src="images/sample.jpg" alt="Gambar sedang" width="250" height="170">
+    </p>
+
+    <h2>Gambar dari Internet</h2>
+    <p>
+        <img 
+            src="https://via.placeholder.com/300x180/4CA5AF/FFFFF?text=Placeholder Image"
+            alt="Placeholder Image"
+            width="300"
+        >
+    </p>
+
+    <h2>Gambar sebagai link</h2>
+    <a href="https://www.google.com">
+        <img src="https://via.placeholder.com/200x100/2196F3/FFFFFF?text=Click+Me" alt="Klik gambar ini">
+    </a>
+
+    <h2>Gambar dengan caption</h2>
+    <figure>
+        <img src="https://via.placeholder.com/400x225/9C27B0/FFFFFF?text=Beautiful+Sunset"
+            alt="Sunset"
+            width="400">
+        <figcaption>Pemandangan matahari terbenam yang indah</figcaption>
+    </figure>
+
+    <p>
+        <strong>Catatan:</strong> Buat folder `images` jika ingin menggunakan gambar lokal.
+        Anda untuk gambar lokal, buatlah folder `images` di dalam folder ini dan masukkan file gambar `sample.jpg`.
+    </p>
+</body>
+</html>
