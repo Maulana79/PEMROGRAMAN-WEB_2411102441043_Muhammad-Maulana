@@ -1,57 +1,135 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Neo-Retro Arcade</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <title>BUBUBITE - Kelezatan dalam Setiap Gigitan!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen p-2">
 
-    <div id="calculator-container" class="calculator-body">
-        <div class="calculator-display mb-5 relative">
-            <span id="display" class="font-pixel">0</span>
-            <div class="scanline-overlay"></div> </div>
+<body class="bg-amber-50 text-gray-800">
 
-        <div class="grid grid-cols-4 gap-3">
-            <button data-action="clear" class="calc-btn btn-function col-span-2">AC</button>
-            <button data-action="delete" class="calc-btn btn-function">DEL</button>
-            <button data-operator="divide" data-key="/" class="calc-btn btn-operator">/</button>
+    <header class="bg-white/80 backdrop-blur-lg shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-amber-500">BUBUBITE</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#menu" class="text-gray-600 hover:text-amber-500 transition duration-300">Menu</a>
+                <a href="#tentang" class="text-gray-600 hover:text-amber-500 transition duration-300">Tentang Kami</a>
+                <a href="#pesan" class="bg-amber-500 text-white px-4 py-2 rounded-full hover:bg-amber-600 transition duration-300 shadow-lg">Pesan Sekarang</a>
+            </div>
+            <div class="md:hidden">
+                <a href="#pesan" class="bg-amber-500 text-white px-4 py-2 rounded-full hover:bg-amber-600 transition duration-300 shadow-lg">Pesan</a>
+            </div>
+        </nav>
+    </header>
 
-            <button data-number="7" data-key="7" class="calc-btn btn-number">7</button>
-            <button data-number="8" data-key="8" class="calc-btn btn-number">8</button>
-            <button data-number="9" data-key="9" class="calc-btn btn-number">9</button>
-            <button data-operator="multiply" data-key="*" class="calc-btn btn-operator">*</button>
+    <main>
+        <section class="hero-bg text-white min-h-[60vh] md:min-h-[80vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-7xl font-black uppercase mb-4 drop-shadow-lg">Kelezatan Corndog Premium</h1>
+                <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">Sosis pilihan dibalut adonan renyah dengan topping favoritmu. Rasakan sensasi tak terlupakan!</p>
+                <a href="#pesan" class="bg-white text-amber-600 font-bold text-lg px-8 py-4 rounded-full hover:bg-amber-100 transition duration-300 transform hover:scale-105 shadow-xl">Pesan Sekarang & Dapatkan Promo!</a>
+            </div>
+        </section>
 
-            <button data-number="4" data-key="4" class="calc-btn btn-number">4</button>
-            <button data-number="5" data-key="5" class="calc-btn btn-number">5</button>
-            <button data-number="6" data-key="6" class="calc-btn btn-number">6</button>
-            <button data-operator="subtract" data-key="-" class="calc-btn btn-operator">-</button>
+        <section id="menu" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-12">Varian Menu Andalan Kami</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <img src="https://placehold.co/600x400/fde68a/333333?text=Original+Corndog" alt="Original Corndog" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Original Corndog</h3>
+                            <p class="text-gray-600 mb-4">Klasik dan lezat. Sosis sapi premium dengan balutan adonan orisinal kami.</p>
+                            <div class="text-2xl font-bold text-amber-500">Rp 15.000</div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <img src="https://placehold.co/600x400/fca5a5/333333?text=Mozzarella+Melt" alt="Mozzarella Corndog" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Mozzarella Melt</h3>
+                            <p class="text-gray-600 mb-4">Kejutan keju mozzarella yang lumer di setiap gigitan. Favorit semua orang!</p>
+                            <div class="text-2xl font-bold text-amber-500">Rp 20.000</div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <img src="https://placehold.co/600x400/a7f3d0/333333?text=Spicy+Bulgogi" alt="Spicy Corndog" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Spicy Bulgogi</h3>
+                            <p class="text-gray-600 mb-4">Untuk pencinta pedas! Kombinasi sosis dengan saus bulgogi pedas manis.</p>
+                            <div class="text-2xl font-bold text-amber-500">Rp 18.000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <button data-number="1" data-key="1" class="calc-btn btn-number">1</button>
-            <button data-number="2" data-key="2" class="calc-btn btn-number">2</button>
-            <button data-number="3" data-key="3" class="calc-btn btn-number">3</button>
-            <button data-operator="add" data-key="+" class="calc-btn btn-operator">+</button>
+        <section id="tentang" class="py-20 bg-amber-100">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/ffffff/333333?text=Dapur+Kami" alt="Proses pembuatan corndog" class="rounded-2xl shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Dibuat dengan Cinta & Bahan Terbaik</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">Di BUBUBITE, kami percaya bahwa makanan lezat berawal dari bahan-bahan berkualitas. Setiap corndog kami buat dari sosis pilihan, adonan yang diracik sempurna, dan digoreng hingga mencapai warna keemasan yang pas. Kami berkomitmen untuk menyajikan snack yang tidak hanya enak, tapi juga higienis dan memuaskan.</p>
+                    <p class="text-gray-700 leading-relaxed">Datang dan buktikan sendiri kenapa BubuBite menjadi pilihan favorit!</p>
+                </div>
+            </div>
+        </section>
 
-            <button data-number="0" data-key="0" class="calc-btn btn-number col-span-2">0</button>
-            <button data-action="decimal" data-key="." class="calc-btn btn-number">.</button>
-            <button data-action="equals" data-key="=" data-key-alt="Enter" class="calc-btn btn-equals">=</button>
+        <section id="pesan" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-12">Pesan Antar Sekarang!</h2>
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-2xl">
+                    <form id="orderForm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-bold mb-2">Nomor WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="variant" class="block text-gray-700 font-bold mb-2">Pilih Varian</label>
+                            <select id="variant" name="variant" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" required>
+                                <option value="Original">Original Corndog - Rp 15.000</option>
+                                <option value="Mozzarella">Mozzarella Melt - Rp 20.000</option>
+                                <option value="Spicy Bulgogi">Spicy Bulgogi - Rp 18.000</option>
+                            </select>
+                        </div>
+                         <div class="mb-4">
+                            <label for="quantity" class="block text-gray-700 font-bold mb-2">Jumlah</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="address" class="block text-gray-700 font-bold mb-2">Alamat Pengiriman</label>
+                            <textarea id="address" name="address" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400" required></textarea>
+                        </div>
+                        <button type="submit" id="submitButton" class="w-full bg-amber-500 text-white font-bold text-lg py-3 rounded-lg hover:bg-amber-600 transition duration-300 shadow-lg">Kirim Pesanan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 BUBUBITE. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <div id="notificationModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-2xl shadow-xl text-center max-w-sm mx-auto">
+            <div id="modalIcon"></div>
+            <h3 id="modalTitle" class="text-2xl font-bold mt-4 mb-2"></h3>
+            <p id="modalMessage" class="text-gray-600 mb-6"></p>
+            <button onclick="closeModal()" class="bg-amber-500 text-white px-6 py-2 rounded-lg hover:bg-amber-600">Tutup</button>
         </div>
     </div>
-
-    <button id="mute-btn" class="mt-6 font-pixel text-xs">SOUND: ON</button>
-
-    <audio id="click-sound" src="Audio/click.mp3" preload="auto"></audio>
-    <audio id="operator-sound" src="Audio/sword.mp3" preload="auto"></audio>
-    <audio id="equals-sound" src="Audio/equals.mp3" preload="auto"></audio>
-    <audio id="error-sound" src="Audio/clear.mp3" preload="auto"></audio>
-    <audio id="clear-sound" src="Audio/error.mp3" preload="auto"></audio>
-
-    <footer>
-        <p class="mt-6 font-pixel">https://github.com/Maulana79/kalkulator</p>
-    </footer>
-    <script src="script.js"></script>
 </body>
 </html>
