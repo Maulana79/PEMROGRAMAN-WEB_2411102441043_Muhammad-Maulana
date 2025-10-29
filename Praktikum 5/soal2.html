@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Perulangan For</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var batas = prompt("Masukkan jumlah pengulangan: ", 0);
+        
+        var jumlah = parseInt(batas);
+
+        if (isNaN(jumlah) || jumlah < 0) {
+            document.write("Input tidak valid. Harap masukkan bilangan positif.");
+        } else {
+            for (var i = 1; i <= jumlah; i++) {
+                document.write("Pengulangan yang ke: " + i + "<br/>");
+            }
+        }
+    </script>
+</body>
+</html>

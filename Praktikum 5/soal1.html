@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleksi If-Else</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var nilai = parseInt(prompt("Nilai (0-100): ", 0));
+        var hasil = "";
+        var huruf = "";
+
+        if (isNaN(nilai) || nilai < 0 || nilai > 100) {
+            hasil = "Nilai Tidak Valid";
+            huruf = "-";
+        } else if (nilai >= 80 && nilai <= 100) { 
+            huruf = "A";
+            hasil = "Lulus";
+        } else if (nilai >= 75) {
+            huruf = "AB";
+            hasil = "Lulus";
+        } else if (nilai >= 70) {
+            huruf = "B";
+            hasil = "Lulus";
+        } else if (nilai >= 65) {
+            huruf = "BC";
+            hasil = "Lulus";
+        } else if (nilai >= 60) {
+            huruf = "C";
+            hasil = "Lulus";
+        } else if (nilai >= 50) {
+            huruf = "D";
+            hasil = "Tidak Lulus";
+        } else { 
+            huruf = "E";
+            hasil = "Tidak Lulus";
+        }
+
+        document.write("Nilai Anda : " + nilai);
+        document.write("<br/>");
+        document.write("Huruf : " + huruf);
+        document.write("<br/>");
+        document.write("Anda " + hasil);
+    </script>
+</body>
+</html>
