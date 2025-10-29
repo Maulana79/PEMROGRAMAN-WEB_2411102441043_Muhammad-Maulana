@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS Pemrograman Web</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #f5f5f5; 
+        }
+        body {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            margin: 0;
+            background: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            gap: 16px;
+            height: calc(100vh - 32px);
+            width: calc(100vw - 32px);
+            box-sizing: border-box;
+            padding: 16px;
+        }
+        .left-section {
+            flex: 1;
+            background: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+            box-sizing: border-box;
+        }
+        .left-section form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .left-section form input[type="text"],
+        .left-section form input[type="email"],
+        .left-section form select {
+            width: 100%;
+            padding: 8px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #bbb;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            background: #fff;
+        }
+        .left-section form input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #bbb;
+            background: #222; 
+            color: #fff;      
+            cursor: pointer;
+        }
+        .left-section form .peringatan {
+            width: 100%;
+            padding: 4px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border-left: 2px solid black;
+            background: #e0e0e0;
+            box-sizing: border-box;
+            margin-top: 8px;
+            text-align: center;
+        }
+        .right-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            border-radius: 10px;
+            min-height: 0;
+            box-sizing: border-box;
+        }
+        .right-section > div {
+            background: #fff;
+            padding: 16px;
+            flex: 1;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+        .right-section > div p {
+            width: 100%;
+            padding: 8px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border-left: 2px solid black;
+            background: #fff;
+            box-sizing: border-box;
+            margin-top: 8px;
+            text-align: left;
+        }
+        .table-container {
+            flex: 1;
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            background: #fff;
+            box-sizing: border-box;
+            min-height: 0;
+        }
+        .table-container h3 {
+            margin: 0 0 10px 0;
+            padding-left: 2px;
+        }
+        .table-container table {
+            margin: 0;
+            width: 100%;
+            border-collapse: collapse;
+            box-sizing: border-box;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #bbb;
+            padding: 14px 18px;
+            text-align: center;
+            vertical-align: middle;
+            box-sizing: border-box;
+            line-height: 1.5;
+        }
+        th {
+            background: #d0d0d0;
+            font-weight: bold;
+        }
+        tr:nth-child(even) td {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <form>
+                <h2>Input Data</h2>
+                <label for="nama">NAMA LENGKAP</label>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama">
+
+                <label for="nim">NIM</label>
+                <input type="text" id="nim" name="nim" required placeholder="20210001">
+
+                <label for="semester">SEMESTER</label>
+                <input type="text" id="semester" name="semester" required placeholder="1-8">
+
+                <label for="prodi">PROGRAM STUDI</label>
+                <select id="prodi" name="prodi" required>
+                    <option value="">--Pilih Program Studi--</option>
+                    <option value="ti">Teknik Informatika</option>
+                    <option value="si">Sistem Informasi</option>
+                    <option value="tk">Teknik Komputer</option>
+                </select>
+
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required placeholder="email@example.com">
+
+                <input type="submit" value="Kirim Data">
+                <p class="peringatan">Isi data Mahasiswa dengan benar</p>
+            </form>
+        </div>
+        <div class="right-section">
+            <div>
+                <h3>Informasi Pengiriman</h3>
+                <p>
+                    Apa yang terjadi saat Anda klik "Kirim Data"?<br>
+                    <br>✔ Data ditampilkan di Console<br>
+                    ✔ Data disimpan di array<br>
+                    ✔ Jumlah data di-update<br>
+                    ✔ Form akan kosong kembali
+                </p>
+            </div>
+            <div class="table-container">
+                <h3>Table Mahasiswa</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>NAMA</th>
+                            <th>INFO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Budi Santoso</td>
+                            <td>
+                                Prodi: TI<br>
+                                Semester: 3
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Siti Nurhaliza</td>
+                            <td>
+                                Prodi: SI<br>
+                                Semester: 4
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        const mahasiswaArr = [];
+        const form = document.querySelector('form');
+        const tableBody = document.querySelector('.table-container tbody');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nama = form.nama.value;
+            const nim = form.nim.value;
+            const semester = form.semester.value;
+            const prodi = form.prodi.value;
+            const email = form.email.value;
+
+            const data = {
+                nama,
+                nim,
+                semester,
+                prodi,
+                email
+            };
+
+            console.log('Data Mahasiswa:', data);
+
+            mahasiswaArr.push(data);
+
+            updateTable();
+
+            form.reset();
+        });
+
+        function updateTable() {
+            tableBody.innerHTML = '';
+            mahasiswaArr.forEach((mhs, idx) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${idx + 1}</td>
+                    <td>${mhs.nama}</td>
+                    <td>
+                        Prodi: ${mhs.prodi.toUpperCase()}<br>
+                        Semester: ${mhs.semester}
+                    </td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
+    </script>
+</body>
+</html>
